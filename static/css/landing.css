@@ -1,0 +1,265 @@
+header img {
+    height: 30px;
+    margin-left: 40px;
+}
+
+body {
+    height: 125vh;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+main {
+
+    background-image: url(/static/images/background.jpg);
+    background-size: cover;
+    min-height: 500px;
+    height: fit-content;
+}
+
+header {
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 55px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 25px 0 black;
+
+}
+
+header * {
+    display: inline;
+}
+
+header li {
+    margin: 20px;
+}
+
+header li a {
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    text-decoration: none;
+}
+
+#auth {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0.897);
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.12);
+}
+
+#register_con,
+#login_con {
+    visibility: hidden;
+}
+
+
+#login_con {
+    height: fit-content;
+    width: 235px;
+    background-color: rgba(255, 255, 255, 0.166);
+    position: absolute;
+    top: 120px;
+    left: 90%;
+    transform: translateX(-90%);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 20px;
+}
+
+#register_con {
+    height: fit-content;
+    width: 275px;
+    background-color: rgba(255, 255, 255, 0.166);
+    position: absolute;
+    top: 80px;
+    left: 90%;
+    transform: translateX(-90%);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 15px;
+}
+
+#ride_con {
+    height: fit-content;
+    width: 275px;
+    background-color: rgba(255, 255, 255, 0.166);
+    position: absolute;
+    top: 120px;
+    left: 90%;
+    transform: translateX(-90%);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 15px;
+    visibility: visible;
+}
+
+#login_con *,
+#register_con * {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+#login_con h3,
+#register_con h3 {
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    text-align: center;
+
+}
+
+#register_con h3 {
+    margin: 0 0 10px 0;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#user_label {
+    font-size: 13px;
+}
+
+input {
+    display: block;
+    height: 50px;
+    width: 93%;
+    background-color: rgba(155, 133, 59, 0.5);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+#register_con input {
+    display: block;
+    height: 35px;
+    width: 100%;
+    background-color: rgba(155, 133, 59, 0.5);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 2px;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+input[type=checkbox] {
+    display: inline;
+    width: 20px;
+    height: 20px;
+}
+
+input[type=radio] {
+    transform: scale(0.6);
+}
+
+#user_type_reg {
+    display: flex;
+    flex-direction: row;
+}
+
+#user_padding {
+    padding-right: 20px;
+}
+
+#login_con label {
+    display: inline;
+}
+
+::placeholder {
+    color: #242121;
+}
+
+#login_con button,
+#register_con button,
+#ride_con button {
+    margin-top: 18px;
+    width: 100%;
+    background-color: #000000;
+    color: #dfdfdf;
+    padding: 9px 0;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+main p {
+    font-size: 12px;
+}
+
+a {
+    color: #1917b9;
+    text-decoration: underline;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.hover:hover {
+    font-size: 16px;
+}
+
+#user_type_nav {
+    display: flex;
+    font-size: 12px;
+
+}
+
+#user_cus {
+    margin-right: 20px;
+    align-items: center;
+}
+
+.message_box {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    background-color: rgba(168, 167, 167, 0.954);
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    visibility: visible;
+
+}
+
+.message_box button {
+    padding: 5px 15px;
+}

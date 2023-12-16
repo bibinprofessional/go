@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Go</title>
+        <link rel="stylesheet" href="/static/css/landing.css">
+        <script src="https://kit.fontawesome.com/045a2db99d.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header id="ads">
+           <img src="/static/images/go_image.png">
+            <nav>
+                <ul>
+                    <li><a class="hover" href="">Home</a></li>
+                    <li><a class="hover" href="#">Company</a></li>
+                    <li><a class="hover" href="#">Rides</a></li>
+                    <li><a class="hover" href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div id="auth">
+                <button type="button" id="auth_login">Login</button>
+                <button type="button" id="auth_register">Register</button>
+                
+            </div>
+        </header>
+        <main>
+            <div id="login_con">
+                <h3>Log In</h3>
+                <form action="" method="post">
+                    <div id="email_con">
+                        <input type="email" placeholder="Enter Email Id" name="email_login" required>
+                    </div>
+    
+                    <div id="password_con">
+                        <input type="password" placeholder="Enter Password" name="password_login" required>
+                    </div>
+    
+                    <div id="check_user">
+                        <label for="user_driver">I am a Driver</label>
+                        <input type="checkbox" id="user_driver" name="user_driver" value="1">
+                    </div>
+                    
+                    <button type="submit">Sign In</button>
+                </form>
+                <p >Create <a id="register_login">Account</a></p>
+            </div>
+            <div id="register_con">
+                <h3>Register</h3>
+                <form action="" method="post">
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="name">Name </label>
+                            </td>
+                            <td>
+                                <input type="text" name="name" id="name" placeholder="Enter Name" required>
+                            </td>
+                        </tr>
+        
+            
+                        <tr>
+                            <td>
+                                <label for="dob">Date of Birth </label>
+                            </td>
+                            <td>
+                                <input type="date" name="dob" id="dob" required>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label for="phone">Phone </label>
+                            </td>
+                            <td>
+                                <input type="number" name="phone" id="phone" required>
+                            </td>
+                        </tr>
+            
+                        <tr>
+                            <td>
+                                <label for="email">Email </label>
+                            </td>
+                            <td>
+                                <input type="email" name="email" id="email" placeholder="Enter Email" required>
+                            </td>
+                        </tr>
+            
+                        <tr>
+                            <td>
+                                <label for="password">Password </label>
+                            </td>
+                            <td>
+                                <input type="password" name="password" id="password" required>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td id="user_label">
+                                User :
+                            </td>
+                            <td id="user_type_reg">
+                                <div id="user_padding">
+                                   <input type="radio" id="cus_radio" value="1" name="user_check"> 
+                                    <label for="cus_radio">Customer</label> 
+                                </div>
+                                <div>
+                                    <input type="radio" id="driver_radio" value="2" name="user_check"> 
+                                    <label for="driver_radio">Driver</label>
+                                </div>
+                                
+                                
+                                
+                            </td>
+                        </tr>
+            
+                        <tr>
+                            <td colspan="2">
+                                <button type="submit">Sign Up</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <p >Already registered <a id="login_register">Login</a></p>
+
+            </div>
+          
+        
+            <div id="ride_con">
+                <i class="fa-solid fa-car"></i>
+                <h3>Request a Ride</h3>
+                <form action="" method="post">
+                    <div id="pickup_con">
+                        <input type="text" placeholder="Enter Pick-up Location" name="pickup" required>
+                    </div>
+    
+                    <div id="desti_con">
+                        <input type="text" placeholder="Enter Destination" name="drop" required>
+                    </div>
+                    
+                    
+                    <button type="submit">Request now</button>
+                </form>
+            </div>
+
+            {%if message %}
+            <div class="message_box" id="message_box1">
+                <h4 id="message_h4">{{message}}</h4>
+                <button type="button" id="message_box_btn1">Ok</button>
+            </div>
+
+            {% endif %}
+
+
+        
+            
+        </main>
+        <div id="blog_con">
+            <div id="vehicles">
+                <h2 class="blog_title">Ride with Go</h2>
+    
+                <table>
+                    <tr>
+                        <td>
+                            <p>
+                                Looking for an affordable and quick ride? Skip the long waiting crowd and zip through traffic with ease and quick using GO Bikes ride .<br>Prices start at Rs 19 for 6 kilometers on your first 2 rides <br>Use promo code <strong>GOBIKE</strong>
+                            </p>
+                        </td>
+                        <td>
+                            <img src="/static/images/bike.webp" alt="Bike image" height="100px" width="auto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                Request a GO Auto and ride comfortably around your city.
+                                Conveniently request a ride with GO Auto from your doorstep at just the tap of a button. <br>Prices start at Rs 29 for 4 kilometers on your first 2 rides. <br>Use promo code <strong>AUTO50</strong>.
+                            </p>
+                        </td>
+                        <td>
+                            <img src="/static/images/auto.webp" alt="Auto image" height="100px" width="auto">
+    
+                        </td>
+                                
+                    </tr>
+    
+                    <tr>
+                        <td>
+                            <p>
+                                Discover affordable intercity travel with GO Intercity anytime, anywhere. Add your destination, check availability on the Uber app, and enjoy hassle-free journeys. <br>Book now for convenient and reliable rides.
+                                <br>Use promo code <strong>CAR50</strong>.
+                            </p>
+                        </td>
+                        <td>
+                            <img src="/static/images/car.webp" alt="Car image" height="100px" width="auto">
+                        </td>
+                    </tr>
+                </table>
+    
+                       
+            </div>
+            <div id="footer">
+                <div id="footer_con">
+                    <h2 class="blog_title">Go</h2>
+                    <div id="about">
+                        <div id="company">
+                            <h4>Company</h4>
+                            <a href="#">About us</a>
+                            <a href="#">Our offerings</a>
+                            <a href="#">Newsroom</a>
+                            <a href="#">Investors</a>
+                            <a href="#">Blog</a>
+                            <a href="#">Careers</a>
+                            <a href="#">AI</a>
+                            <a href="#">Gift cards</a>
+                        </div>
+                        <div id="products">
+                            <h4>Products</h4>
+                            <a href="#">Ride</a>
+                            <a href="#">Drive</a>
+                            <a href="#">Deliver</a>
+                            <a href="#">Eat</a>
+                            <a href="#">Go business</a>
+                            <a href="#">Go freight</a>
+                        </div>
+                        <div id="global">
+                            <h4>Global citizenship</h4>
+                            <a href="#">Safety</a>
+                            <a href="#">Diversity</a>
+                        </div>
+                        <div id="travel">
+                            <h4>Travel</h4>
+                            <a href="#">Reserve</a>
+                            <a href="#">Airports</a>
+                            <a href="#">Cities</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        <footer>
+            <script src="/static/js/landing.js"></script>
+        </footer>
+    </body>
+</html>

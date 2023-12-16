@@ -1,0 +1,282 @@
+* {
+    border: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 200;
+}
+
+body {
+    min-width: 99vw;
+    width: fit-content;
+}
+
+h1 {
+    position: relative;
+    left: 30px;
+    display: inline;
+    text-decoration: none;
+}
+
+#logo {
+    display: inline;
+    font-size: small;
+    text-decoration: none;
+    color: black;
+}
+
+#menu_nav {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    left: 100%;
+    transform: translateX(-100%);
+    position: relative;
+    top: -30px;
+
+}
+
+header h2 {
+    font-size: small;
+}
+
+h2 {
+    font-size: medium;
+    color: blue;
+    padding: 0 20px 20px 20px;
+
+}
+
+i {
+    padding-right: 10px;
+}
+
+header {
+    height: 35px;
+    border-bottom: 2.5px solid rgba(128, 128, 128, 0.205);
+}
+
+#content {
+    display: flex;
+    width: fit-content;
+}
+
+#travel_map {
+    padding: 20px;
+}
+
+input {
+    display: block;
+    width: 250px;
+    height: 25px;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.291);
+    background-color: rgba(128, 128, 128, 0.117);
+    font-weight: 200;
+    border-radius: 5px;
+}
+
+#travel_form {
+    display: block;
+    padding: 20px;
+}
+
+#form_travel {
+    border: 1.5px solid rgba(128, 128, 128, 0.3);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+button {
+    margin-top: 20px;
+    position: relative;
+    left: 100%;
+    transform: translateX(-100%);
+    padding: 5px 15px 5px 15px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#profile_pic {
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    background-image: url('/static/images/profile.jpg');
+    background-size: cover;
+}
+
+#cus_menu_box {
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 35px;
+    transform: translateX(-100%);
+    list-style-type: none;
+    width: max-content;
+    height: fit-content;
+    min-height: 90vh;
+    background: rgba(0, 0, 0, 0.927);
+    box-shadow: 0 0 6px rgb(0, 0, 0);
+    padding-top: 15px;
+    visibility: hidden;
+    z-index: 3;
+
+
+}
+
+li {
+    font-size: 12px;
+    position: relative;
+    padding: 20px 25px 20px 5px;
+    transition: all 0.1s linear;
+}
+
+li:hover {
+    padding: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    border-right: 1px solid #ffffff;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.785);
+}
+
+a {
+    position: relative;
+    display: block;
+    color: rgba(255, 255, 255, 0.872);
+    text-decoration: none;
+
+}
+
+i {
+    margin-right: 10px;
+}
+
+#menu_icon:hover {
+    cursor: pointer;
+}
+
+
+
+
+table {
+
+    border-collapse: collapse;
+    width: 450px;
+    margin-bottom: 20px;
+
+}
+
+#profile_edit_con,
+#profile_display_con {
+    visibility: hidden;
+}
+
+#profile_display_con {
+    position: absolute;
+    top: 55px;
+    left: 45%;
+    z-index: 2;
+
+}
+
+#profile_edit_con {
+    position: absolute;
+    top: 55px;
+    left: 45%;
+    z-index: 2;
+
+}
+
+/* Style table headers */
+th {
+    background-color: #f2f2f2;
+}
+
+/* Style table rows */
+tr:nth-child(even) {
+    background-color: #363c3575;
+}
+
+tr:nth-child(odd) {
+    background-color: #2f4e675a;
+}
+
+/* Style table cells */
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+td button {
+    margin-top: 20px;
+    position: relative;
+    left: 50%;
+    padding: 5px 15px 5px 15px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    margin-right: 30px;
+}
+
+button:hover {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#delete_con {
+    width: 350px;
+    background-color: rgb(90, 123, 160);
+    z-index: 2;
+    position: absolute;
+    left: 75%;
+    transform: translateX(-75%);
+    top: 100px;
+    padding: 15px;
+    visibility: hidden;
+}
+
+#delete_con button {
+    margin-top: 20px;
+    position: relative;
+    left: 80%;
+    padding: 5px 15px 5px 15px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    margin-right: 10px;
+}
+
+#delete_yes_form {
+    display: inline;
+}
+
+.message_box {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 180px;
+    left: 70%;
+    transform: translateX(-70%);
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    background-color: rgba(168, 167, 167, 0.954);
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    visibility: visible;
+    z-index: 2;
+
+}
+
+.message_box button {
+    padding: 5px 15px;
+    left: 0%;
+    transform: translateX(-0%);
+}

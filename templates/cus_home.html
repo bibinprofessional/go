@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/cus_home.css">
+    <script src="https://kit.fontawesome.com/045a2db99d.js" crossorigin="anonymous"></script>
+    <title>Ride</title>
+</head>
+<body>
+    <header>
+        <a id="logo" href=""><h1>Go</h1></a>
+        <div id="menu_nav">
+            <h2>{{user.name}}</h2>
+            <i id="menu_icon" class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <div id="content">
+        <div id="travel_form">
+            <form action="" id="form_travel">
+                <h2>Get a Ride</h2>
+                <input type="text" placeholder="Enter Pick-up Location" value="{{pickup}}">
+                <input type="text" placeholder="Enter Destination" value="{{drop}}">
+                <input type="date">
+                <input type="time">
+                <button type="submit">Search</button>
+                
+            </form>
+        </div>
+        <div id="travel_map">
+            <img id="img_map" src="/static/images/map.gif" alt="map image" width="600px" height="auto">
+           
+        </div>
+    </div>
+ 
+    <ul id="cus_menu_box">
+        <div id="profile_pic">
+        </div>
+        <li id="menu_profile_btn">
+            <a id="profile_btn">
+                <i class="fa-solid fa-user"></i>
+                Profile
+            </a>
+        </li>
+        <li id="menu_tasks_btn">
+            <a id="rides_btn">
+                <i class="fa-solid fa-list-check"></i>
+                Rides
+            </a>
+        </li>
+        <li id="menu_settings_btn">
+            <a id="settings_btn">
+                <i class="fa-solid fa-gears"></i>
+                Settings
+            </a>
+        </li>
+        <li id="menu_logout_btn">
+            <a href="/ride_logout/{{user.id}}" id="logout_btn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                LogOut
+            </a>
+        </li>
+    </ul>
+    
+    <table id="profile_display_con">
+        <tr>
+            <td>Name</td>
+            <td> {{user.name}}</td>
+        </tr>
+        <tr>
+            <td>Date of Birth</td>
+            <td> {{user.dob}}</td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td> {{user.phone}}</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td> {{user.email}}</td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td> {{user.password}}</td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="button" id="profile_edit_bttn">Edit</button><button type="button" id="profile_delete_bttn">Delete</button></td>
+        </tr>
+
+    </table>
+
+
+    
+
+    <form id="profile_edit_con" action="" method="post">
+        <table >
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name" id="name" value="{{user.name}}" required></td>
+            </tr>
+            <tr>
+                <td>Date of Birth</td>
+                <td><input type="date" name="dob" id="dob" value="{{user.dob}}" required> </td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td><input type="number" name="phone" id="phone" value="{{user.phone}}" required> </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="email" id="email" value="{{user.email}}" required> </td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password" id="password" value="{{user.password}}" required> </td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Submit</button></td>
+            </tr>
+    
+        </table>
+    </form>
+
+    <div id="delete_con">
+        <h4>Are you sure you want to delete this user ?</h4>
+        <button type="button" id="delete_no_btn">No</button>
+        <form id="delete_yes_form" action="" method="post">
+            <button type="submit" id="delete_yes_btn">Yes</button>
+        </form>
+        
+    </div>
+
+    {%if message %}
+    <div class="message_box" id="message_box1">
+        <h4 id="message_h4">{{message}}</h4>
+        <button type="button" id="message_box_btn1">Ok</button>
+    </div>
+
+    {% endif %}
+    
+    <footer>
+        <script src="/static/js/cus_home.js"></script>
+    </footer>
+</body>
+</html>
